@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 import Body from './Components/Body';
 import Alert from './Components/Alert';
 import About from './Components/About';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 
@@ -50,16 +50,17 @@ function App() {
 
   return (
     <>
-      <Router>
         <Navbar title="TextApp" moddes={mode} chnage={togle} red={showred} blue={showblue} />
         <Alert alert={alert} />
-        <div className="container">
+      {/* <Router>
           <Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/" element={<Body heading="Preview your text" showalert={showalert} moddes={mode} titlehead="Enter your text" />} />
+            <Route path="/" element={} />
           </Routes>
+      </Router> */}
+        <div className="container">
+          <Body heading="Preview your text" showalert={showalert} moddes={mode} titlehead="Enter your text" />
         </div> 
-      </Router>
       
     </>
   );
